@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1489470417 source:/home/hamza/Desktop/openMP/main.c
+	<stdio.h>
+	<stdlib.h>
+	<omp.h>
+	<sys/time.h>
+	<time.h>
+

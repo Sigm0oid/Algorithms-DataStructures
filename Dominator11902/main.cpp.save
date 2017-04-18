@@ -1,0 +1,104 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+typedef pair<int,int> ii;
+typedef vector<ii> vii;
+vector<vii> Adjlist;
+int n;
+int domination[100][100];
+vector<int> vis1;
+vector<int> vis;
+
+void bfs(){
+    vis1[0]=1;
+    queue<int> q;
+    q.push(0);
+    while(!q.empty()){
+        int a=q.front();
+        q.pop();
+        for(int i=0;i<Adjlist[a].size();i++){
+            if(vis1[Adjlist[a][i].first]==0 ){
+            vis1[Adjlist[a][i].first]=1;
+            q.push(Adjlist[a][i].first);
+            }
+        }
+    }
+}
+void bfs1(int j){
+    vis[0]=1;
+    queue<int> q;
+    q.push(0);
+    while(!q.empty()){
+        int a=q.front();
+        q.pop();
+        if(a==j)
+
+        continue;
+
+        for(int i=0;i<Adjlist[a].size();i++){
+            if(vis[Adjlist[a][i].first]==0 ){
+            vis[Adjlist[a][i].first]=1;
+            q.push(Adjlist[a][i].first);
+            }
+        }
+    }
+}
+int main()
+{
+freopen("in.in","r",stdin);
+freopen("out.","w",stdout);
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+
+    cin>>n;
+    Adjlist.clear();
+    Adjlist.resize(n);
+    vis1.clear();
+    vis1.resize(n);
+    for(int j=0;j<n;j++){
+        for(int k=0;k<n;k++){
+            int x;
+            cin>>x;
+            if(x!=0)
+            Adjlist[j].push_back(ii(k,1));
+
+        }
+    }
+    bfs();
+    for(int j=0;j<n;j++)
+    {
+          if(vis1[j]!=0){
+          vis.clear();
+          vis.resize(n);
+          bfs1(j);
+          for(int k=0;k<n;k++)
+          domination[j][k]=(vis[k]!=vis1[k]);
+          domination[j][j]=1;
+          }
+
+
+    }
+    string line="+";
+    for(int k=0;k<2*n-1;k++)
+    line+="-";
+    line+="+";
+    cout<<"Case "<<i+1<<":"<<endl;
+    for(int j=0;j<n;j++){
+    cout<<line<<endl;
+    for(int k=0;k<n;k++){
+    cout<<"|";
+    if(domination[j][k]==1)
+    cout<<"Y";
+    else
+    cout<<"N";
+    }
+    cout<<"|"<<endl;
+    }
+    cout<<line<<endl;
+
+    }
+    return 0;
+}

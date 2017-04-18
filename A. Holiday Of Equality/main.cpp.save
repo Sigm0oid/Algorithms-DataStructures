@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+int main()
+{
+    map<ll,ll> citiziens;
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+    ll tmp;
+    cin>>tmp;
+    citiziens[tmp]++;
+    }
+    ll somme=0;
+    for(auto i=citiziens.begin();i!=citiziens.end();i++)
+    somme+=(i->second*())
+    cout<<n-citiziens.rbegin()->second<<endl;
+    return 0;
+}

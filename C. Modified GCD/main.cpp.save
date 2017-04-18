@@ -1,0 +1,80 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll ;
+ set <int> aDivisors ;
+ set <ll> bDivisors ;
+ vector <ll> aFactors;
+ vector <ll> bFactors;
+vector<ll> factors(ll n) {
+vector<ll> f;
+for (ll x = 2; x*x <= n; x++) {
+while (n%x == 0) {
+f.push_back(x);
+n /= x;
+}
+}
+if (n > 1) f.push_back(n);
+return f;
+}
+
+void genera(ll pos,ll prod){
+    if(pos==aFactors.size())
+    return ;
+
+    for(ll i=pos;i<aFactors.size();i++){
+        aDivisors.insert(prod*aFactors[i]);
+        genera(i+1,prod*aFactors[i]);
+    }
+
+}
+
+void generb(ll pos,ll prod){
+    if(pos==bFactors.size())
+    return ;
+    for(ll i=pos;i<bFactors.size();i++){
+        bDivisors.insert(prod*bFactors[i]);
+        generb(i+1,prod*bFactors[i]);
+    }
+
+}
+
+int main()
+{
+    ll a,b ;
+    cin >> a >> b ;
+    ll n ;
+    cin >> n ;
+    aFactors = factors(a) ;
+    bFactors = factors(b) ;
+    genera(0,1);
+    generb(0,1);
+
+    vector<ll> v_intersection;
+    set_intersection(aDivisors.begin(), aDivisors.end(),
+                          bDivisors.begin(), bDivisors.end(),
+                          back_inserter(v_intersection));
+
+
+    for (ll i=0;i<n;i++)
+    {
+        ll low,high ;
+        cin >> low >> high ;
+        ll left=0;
+        ll right=v_intersection.size()-1;
+        bool found=false;
+        while(l<=r&&!found){
+        ll mid=(left+right)/2;
+        if(v_intersection[mid]>low&&v_intersection[mid]<hight){
+            found=true;
+        }
+        else{
+            if(v_intersection[mid]<low)
+            led
+        }
+        }
+
+
+    }
+
+}
+

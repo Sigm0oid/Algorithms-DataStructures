@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef  long long ll;
+int main()
+{
+    ll n,m,k;
+    map<ll,ll> holes;
+    cin>>n>>m>>k;
+    for(ll i=0;i<m;i++){
+    ll x;
+    cin>>x;
+    holes[x]++;
+
+    }
+    ll res=1;
+    bool inhole=(holes.find(1)!=holes.end());
+    while(k--){
+    ll a,b;
+    cin>>a>>b;
+    if(res==a&&res==b&&!inhole){
+    if(res==a)
+    {res=b;
+    else
+    res=a;
+    }
+    }
+
+    return 0;
+}

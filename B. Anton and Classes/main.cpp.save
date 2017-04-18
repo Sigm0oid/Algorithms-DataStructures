@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+typedef pair<ll,ll> ii;
+typedef vector<ii> vii;
+
+ll n,m;
+vii cheese,prog;
+int main()
+{
+    ll first_out_cheese=LLONG_MAX,first_out_prog=LLONG_MAX;
+    ll first_in_cheese=LLONG_MAX,first_in_prog=LLONG_MAX;
+    cin>>n;
+    cheese.resize(n);
+        for(ll i=0;i<n;i++){
+        cin>>cheese[i].first>>cheese[i].second;
+        first_out_cheese=min(first_out_cheese,cheese[i].second);
+        
+        }
+    cin>>m;
+    prog.resize(m);
+    for(ll i=0;i<m;i++){
+        cin>>prog[i].first>>prog[i].second;
+        }
+    sort(cheese.begin(),cheese.end());
+    sort(prog.begin(),prog.end());
+
+    return 0;
+}

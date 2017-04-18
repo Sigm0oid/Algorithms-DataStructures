@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+ll n;
+map<string,ll> val;
+int main()
+{
+    val["Tetrahedron"]=4;
+    val["Cube"]=6;
+    val["Tetrahedron"]=4;
+    val["Tetrahedron"]=4;
+    cin>>n;
+    for (ll i=0;i<n;i++) {
+    string a;
+    cin>>a;
+    res+=val[a];
+    }
+    cout<<res<<endl;
+    return 0;
+}

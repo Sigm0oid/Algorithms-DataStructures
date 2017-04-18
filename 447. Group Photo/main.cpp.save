@@ -1,0 +1,52 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+int n;
+vector<int> a;
+vector<int> b;
+bool check(){
+for(int i=0;i<n;i++)
+if(a[i]!=b[i])
+return false;
+return true;
+}
+int min_swap(){
+if(check())
+return 0;
+int res=INT_MAX;
+for(int i=0;i<n;i++){
+if(a[i]!=b[i]){
+    for(int j=0;j<n;j++){
+        if(b[j]==a[i]){
+            swap(a[i],a[j]);
+            res=min(res,m)
+        }
+    }
+}
+
+}
+
+
+}
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+    cin>>n;
+    for(int i=0;i<n;i++){
+    int x;
+    cin>>x;
+    a.push_back(x)
+    }
+    for(int i=0;i<n;i++){
+    int x;
+    cin>>x;
+    b.push_back(x)
+    }
+    cout<<min_swap()<<endl;
+
+    }
+    return 0;
+}

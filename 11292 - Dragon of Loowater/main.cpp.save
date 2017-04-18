@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+
+ll n,m;
+vector<ll> heads;
+vector<ll> lengths;
+int main()
+{
+    while(cin>>n>>m&&n>0&&m>0){
+    heads.clear();
+    lengths.clear();
+    ll tmp=n
+    while(tmp--){
+    ll x;
+    cin>>x;
+    heads.push_back(x);
+    }
+    while(m--){
+    ll x;
+    cin>>x;
+    lengths.push_back(x);
+    }
+    sort(heads.begin(),heads.end());
+    sort(lengths.begin(),lengths.end());
+    ll i=0;
+    ll j=0;
+    ll cmp=0;
+    while(i<heads.size()&&j<lengths.size()&&cmp<n){
+    if(heads[i]<=lengths[j]){
+    cmp+=lengths[j];
+    j++;
+    i++;
+    }
+    else if(heads[i]<=lengths[j]){
+    
+    }
+    }
+    }
+    return 0;
+}

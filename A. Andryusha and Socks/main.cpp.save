@@ -1,0 +1,27 @@
+#include <bits/sdc++.h>
+
+using namespace std;
+typedef long long ll;
+int tab[100000];
+int main()
+{
+    ll n;
+    cin>>n;
+    memset(tab,0,sizeof tab);
+    ll maax=LLONG_MIN;
+    ll cmp=0;
+
+    for(int i=0;i<2*n;i++){
+    ll x;
+    cin>>x;
+    if(tab[x-1]==1)
+    tab[x-1]=0;
+    cmp--;
+    else
+    cmp++;
+    maax=max(maax,cmp);
+    }
+    cou
+
+    return 0;
+}

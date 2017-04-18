@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+
+
+using namespace std;
+typedef long long ll;
+ll x,y;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+    int nb_test;
+    cin>>nb_test>>x>>y;
+    isibizi();
+    if(res.size()==0)
+    cout<<"NO PATH"<<endl;
+    else
+    cout<<
+
+    }
+    return 0;
+}

@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+ll n,d,c;
+int main()
+{
+        ll t;
+        scanf("%lld",&t);
+        ll res=0;
+
+       string s;
+       cin>>s;
+        
+        std::string::size_type i=0;
+  while ( (i<str.length()) && (std::isalnum(str[i])) ) {++i;}
+  std::cout << "The first " << i << " characters are alphanumeric.\n";
+
+
+    return 0;
+}

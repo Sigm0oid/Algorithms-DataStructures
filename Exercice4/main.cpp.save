@@ -1,0 +1,9 @@
+#include <bits/stdc++.h>
+#include "Avion.h"
+using namespace std;
+
+int main()
+{
+    Avion a=new Avion("");
+    return 0;
+}

@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef vector<int> vi;
+vi p;
+int mf,f,s=0,t=39;
+int res[40][40];
+
+void augment(int v,int minEdge){
+if(v==s){f=minEdge;return;}
+else if(p[v]!=-1){augment(p[v],min(minEdge,res[p[v]][v]))
+                res[p[v]][v]-=f;res[v][p[v]]+=f;
+}
+}
+void Edmon(){
+mf=0;
+while(1){
+vi dis;
+dis.assign(40,INT_MAX); dis[0]=0;
+p.assign(40,-1);
+queue<int> q;q.push(s);
+while(!q.empty()){
+int u=q.front();q.pop();
+if(u==t) break;
+for(int i=0;i<40;i++)
+    if(res[u][i]>0&)
+
+
+}
+
+
+}
+
+}
+
+int main()
+{
+    cout << "Hello world!" << endl;
+    return 0;
+}

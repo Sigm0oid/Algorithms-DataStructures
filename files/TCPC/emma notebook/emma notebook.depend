@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1446136813 source:/home/geekhamza/Desktop/emma notebook/main.cpp
+	<map>
+	<set>
+	<list>
+	<cmath>
+	<ctime>
+	<deque>
+	<queue>
+	<stack>
+	<string>
+	<bitset>
+	<cstdio>
+	<limits>
+	<vector>
+	<climits>
+	<cstring>
+	<cstdlib>
+	<fstream>
+	<numeric>
+	<sstream>
+	<iostream>
+	<algorithm>
+

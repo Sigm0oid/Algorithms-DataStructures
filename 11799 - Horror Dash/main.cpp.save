@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+typedef long long ll;
+ll t,n,maax;
+vector<ll> tab;
+int main()
+{
+    cin>>t;
+
+    for(int i=0;i<t;i++){
+    cin>>n;
+    tab.resize(n);
+    maax=LLONG_MIN;
+    for(int j=0;j<n;j++){
+    cin<>tab[j];
+    max=
+    }
+    }
+    return 0;
+}

@@ -1,0 +1,29 @@
+#include "Avion.h"
+
+using namespace std;
+Avion::~Avion()
+{
+    //dtor
+}
+Avion::Avion(string id,string type,string etat){
+    this.id=id;
+    this.type=type;
+    this.etat=etat;
+
+    }
+    virtual ~Avion();
+Avion::changeEtat(string newetat){
+    etat=newetat;
+    }
+    Avion::getEtat(){
+    return this.etat;
+    }
+    Avion::getNom(){
+    return this.id;
+    }
+    Avion:: description{
+    cout<<"description"<<endl;
+    cout<< " id :"<<this.id<<endl;
+    cout<< " etat :"<<this.etat<<endl;
+    cout<< " type :"<<this.type<<endl;
+    };

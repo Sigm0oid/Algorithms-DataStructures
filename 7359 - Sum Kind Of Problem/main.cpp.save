@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--){
+    ll nb_test,n;
+    cin>>nb_test,n;
+
+    ll pos,odd,even;
+    pos=(n*(n-1)/2);
+    for(ll i=1;i<=n;i++){
+    if(i&2)
+    even++;
+    else
+    od++
+    }
+
+    }
+    return 0;
+}

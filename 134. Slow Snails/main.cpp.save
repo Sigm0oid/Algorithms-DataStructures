@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--){
+    ll n,h;
+    cin>>n>>h;
+    ll g1=n/2;
+    g
+    }
+    return 0;
+}

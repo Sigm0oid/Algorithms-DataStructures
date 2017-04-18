@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+typedef vector<ll> vi;
+vi num;
+int main()
+{
+    ll n;
+    cin>>n;
+    map<ll,ll> mp;
+    ll tmp=n;
+    while(n--){
+    ll x;
+    cin>>x;
+    mp[x]++;
+    }
+    cout<<tmp-(mp.rbegin().second)<<endl;
+
+
+    return 0;
+}

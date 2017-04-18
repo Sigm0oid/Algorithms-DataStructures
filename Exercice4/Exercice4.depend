@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1488355790 source:/media/hamza/B8AAF549AAF505221/TCPC/usaco/Exercice4/main.cpp
+	<bits/stdc++.h>
+	"Avion.h"
+
+1488356881 /media/hamza/B8AAF549AAF505221/TCPC/usaco/Exercice4/include/Avion.h
+	<bits/stdc++.h>
+
+1488356992 source:/media/hamza/B8AAF549AAF505221/TCPC/usaco/Exercice4/src/Avion.cpp
+	"Avion.h"
+	<bits/stdc++.h>
+

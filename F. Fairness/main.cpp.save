@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+int n;
+int match (int samir,int dwik,int current_max,int pos)
+if(pos==n)
+return current_max;
+
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+    cin>>n;
+    int tab[n];
+    for(int i=0;i<n;i++)
+    cin>>tab[i];
+    int best=match(0,0,0,0);
+
+    }
+    return 0;
+}

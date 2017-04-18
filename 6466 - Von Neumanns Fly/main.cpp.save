@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+double d,a,b,f;
+
+
+int main()
+{
+    ll T;
+    cin>>T;
+    while(T--){
+    ll nb_test;
+    cin>>nb_test;
+    cin>>d>>a>>b>>f;
+    double posA=0.0,posB=d*1.0;
+    bool fly=0;
+    double res=0;
+    double t;
+    double prev=0;
+    ll o=1000;
+    while(o--){
+    t=(double)d/((a+b+f)*1.0);
+    prevt=t;
+    }
+    cout<<nb_test;
+    printf(" %.2f\n",t*f);
+    }
+    return 0;
+}

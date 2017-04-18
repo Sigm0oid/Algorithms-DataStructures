@@ -1,0 +1,93 @@
+#include <bits/stdc++.h>
+#define MAX 4000000001000
+using namespace std;
+typedef long long ll;
+ll circle[210];
+int n;
+//ll dp[210][210];
+map<set<int>,ll> dp;
+//bool inbound(int i,int j,int inf,int supp){
+//    return((i>inf&&j<supp)||(i<inf&&j>supp)||(i>supp&&j>supp)||(i<inf&&j<inf));
+//}
+int matching[210];
+ll match(set<int> points,int cmp){
+
+if(cmp==0)
+{
+//    for(int i=1;i<=n;i++){
+//    cout<<matching[i]<<" ";
+//    }
+//    cout<<endl;
+    return 0;
+}
+if(dp.find(points)!=dp.end())
+{
+//cout<<" already calculated"<<endl;
+//for(auto i:points)
+//cout<<i<<" ";
+//cout<<endl;
+return dp[points];
+}
+ll res=MAX;
+    for(int i=1;i<=n;i++){
+        for(int j=i+1;j<=n;j++){
+            if(matching[j]!=-1)
+            {
+            }
+            if(matching[i]==-1&&matching[j]==-1&&((i+j)%2==1)&&i!=j){
+                matching[i]=j;
+                matching[j]=i;
+                points.erase(i);
+                points.erase(j);
+                ll cost=((circle[i]+circle[j])*(circle[i]+circle[j]));
+                res=min(res,cost+match(points,cmp-2));
+                points.insert(j);
+                points.insert(i);
+                matching[i]=-1;
+                matching[j]=-1;
+            }
+        }
+    }
+
+    return dp[points]=res;
+
+
+
+
+
+
+}
+
+int main()
+{
+    freopen("game.in","r",stdin);
+    int t;
+    scanf("%d",&t);
+    set<int> points;
+    while(t--){
+        points.clear();
+        dp.clear();
+        scanf("%d",&n);
+        memset(circle,0,sizeof circle);
+        for(int i=1;i<=n;i++){
+            scanf("%lld",&circle[i]);
+            points.insert(i);
+        }
+
+        memset(matching,-1,sizeof matching);
+        printf("%lld\n",match(points,n));
+        for(auto i=dp.begin();i!=dp.end();i++)
+        {
+            for(auto j:i->first)
+            cout<<j<<" ";
+
+            cout<<" the best of that set is "<<i->second<<endl;
+        }
+
+
+
+    }
+
+    return 0;
+}
+

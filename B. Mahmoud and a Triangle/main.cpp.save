@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+int main()
+{
+    ll n;
+    vector<ll> segment;
+    map<ll,int> sge_map;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        ll x;
+        cin>>x;
+        segment.push_back(x);
+        segment_map[x]++;
+
+    }
+    sort(segment.begin(),segment.end());
+
+    }
+
+    return 0;
+}

@@ -1,0 +1,56 @@
+// C++ program to find  minimum number of swaps
+// required to sort an array
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+typedef pair<int,int> ii;
+
+
+int minSwaps(vector<int> v, int n)
+{
+   int ans=0;
+   vector<pair<int,int> > pos;
+   for(int i=0;i<n;i++){
+    pos.push_back(ii(i,-1));
+   }
+    sort(v.begin(),v.end());
+
+    for(int i=0;i<n;i++){
+    pos[i].second=i;
+   }
+   vector<int> vis;
+   vis.assign(n,0);
+
+   for(int i=0;i<n;i++){
+
+    if(vis[i]!=0||pos[i].first==i)
+    continue;
+
+    int j=i;
+    int cycle=;
+    while(vis[j]==0&&pos[j].first!=j){
+        cycle++;
+        j=pos[j].second;
+    }
+    ans+=(cycle-1);
+   }
+   return ans;
+
+
+}
+
+int main()
+{
+    vector<int> v;
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        int x;
+        cin>>x;
+        v.push_back(x);
+    }
+    cout << minSwaps(v, n);
+    return 0;
+}
+
